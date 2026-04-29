@@ -4,6 +4,22 @@ Proyecto final del curso Machine Learning Operations.
 
 Este proyecto implementa una API de predicción del precio de cierre de la acción de IBM utilizando un modelo de Machine Learning entrenado con datos históricos de precios.
 
+## Servicio desplegado
+
+La API se encuentra desplegada en una instancia EC2 de AWS utilizando Docker.
+
+URL pública de documentación:
+
+```text
+http://54.162.215.165:8000/docs
+```
+
+Endpoint de salud:
+
+```text
+http://54.162.215.165:8000/health
+```
+
 ## Dataset
 
 Fuente: IBM Stock Prices 1980-2025, Kaggle.
