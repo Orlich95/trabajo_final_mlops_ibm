@@ -1,0 +1,5 @@
+outs:
+- md5: 0376debdf7214f338b71e1ccc9ba6dfd
+  size: 1294206
+  hash: md5
+  path: IBM_Stock_1980_2025.csv
