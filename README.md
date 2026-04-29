@@ -122,3 +122,37 @@ flowchart LR
 - Pruebas con Pytest.
 - Dockerfile funcional.
 - Métricas guardadas en JSON.
+
+## Versionamiento de datos y modelos con DVC + S3
+
+El proyecto utiliza DVC para versionar los datos y el modelo entrenado.  
+Los archivos pesados no se almacenan directamente en GitHub, sino que se gestionan mediante archivos `.dvc`.
+
+Bucket S3 utilizado:
+
+```text
+s3://mlops-orlich-final
+```
+
+Archivos versionados con DVC:
+
+```text
+data/IBM_Stock_1980_2025.csv.dvc
+models/model.pkl.dvc
+```
+
+Comandos utilizados:
+
+```bash
+dvc init
+dvc remote add -d storage s3://mlops-orlich-final
+dvc add data/IBM_Stock_1980_2025.csv
+dvc add models/model.pkl
+dvc push
+```
+
+Para recuperar los datos y el modelo desde S3:
+
+```bash
+dvc pull
+```
